@@ -13,3 +13,4 @@ user_mobile_num = "987654321"
 subject = "Issues with ads"
 message = "There are too many ads poping up while testing, Do fix it."
 #file = r"C:\Users\dhanush.srinivasa\Downloads\KARTHIK Resume.pdf"
+#test
