@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -7,9 +9,9 @@ from Driver import driver
 
 class TestAddToCart():
     def testAddToCartByRecommended(self,driver):
-        driver.execute_script("window.scrollBy(0,1000);")
 
         recommended_item = WebDriverWait(driver,10).until(EC.visibility_of_element_located((By.XPATH,"//h2[text() = 'recommended items']")))
+        driver.execute_script("arguments[0].scrollIntoView();", recommended_item)
 
         assert recommended_item.text == "RECOMMENDED ITEMS"
 
